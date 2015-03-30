@@ -13,11 +13,10 @@ import UIKit
 
 struct Tiger {
 
-    //JB : Adding some Properties
+    //JB : Adding some Properties to our Struct
 
     var age = 0 // var age:Int! - + default value helps :)
     var name = ""
     var breed = ""
     var image = UIImage(named:"") // required import of UIKit
-
 }

@@ -14,6 +14,14 @@
 		EE12B46C1AC976100089CE1D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE12B46A1AC976100089CE1D /* LaunchScreen.xib */; };
 		EE12B4781AC976100089CE1D /* LionsAndTigersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B4771AC976100089CE1D /* LionsAndTigersTests.swift */; };
 		EE12B4821AC979CC0089CE1D /* Tiger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE12B4811AC979CC0089CE1D /* Tiger.swift */; };
+		EE12B48B1AC97F330089CE1D /* BengalTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4831AC97F330089CE1D /* BengalTiger.jpg */; };
+		EE12B48C1AC97F330089CE1D /* IndochineseTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4841AC97F330089CE1D /* IndochineseTiger.jpg */; };
+		EE12B48D1AC97F330089CE1D /* Lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4851AC97F330089CE1D /* Lion.jpg */; };
+		EE12B48E1AC97F330089CE1D /* LionCub1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4861AC97F330089CE1D /* LionCub1.jpg */; };
+		EE12B48F1AC97F330089CE1D /* LionCub2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4871AC97F330089CE1D /* LionCub2.jpeg */; };
+		EE12B4901AC97F330089CE1D /* Lioness.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4881AC97F330089CE1D /* Lioness.jpeg */; };
+		EE12B4911AC97F330089CE1D /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4891AC97F330089CE1D /* MalayanTiger.jpg */; };
+		EE12B4921AC97F330089CE1D /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B48A1AC97F330089CE1D /* SiberianTiger.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +46,14 @@
 		EE12B4761AC976100089CE1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE12B4771AC976100089CE1D /* LionsAndTigersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LionsAndTigersTests.swift; sourceTree = "<group>"; };
 		EE12B4811AC979CC0089CE1D /* Tiger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tiger.swift; sourceTree = "<group>"; };
+		EE12B4831AC97F330089CE1D /* BengalTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = BengalTiger.jpg; sourceTree = "<group>"; };
+		EE12B4841AC97F330089CE1D /* IndochineseTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IndochineseTiger.jpg; sourceTree = "<group>"; };
+		EE12B4851AC97F330089CE1D /* Lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lion.jpg; sourceTree = "<group>"; };
+		EE12B4861AC97F330089CE1D /* LionCub1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LionCub1.jpg; sourceTree = "<group>"; };
+		EE12B4871AC97F330089CE1D /* LionCub2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LionCub2.jpeg; sourceTree = "<group>"; };
+		EE12B4881AC97F330089CE1D /* Lioness.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpeg; sourceTree = "<group>"; };
+		EE12B4891AC97F330089CE1D /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
+		EE12B48A1AC97F330089CE1D /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +109,14 @@
 		EE12B45F1AC976100089CE1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EE12B4831AC97F330089CE1D /* BengalTiger.jpg */,
+				EE12B4841AC97F330089CE1D /* IndochineseTiger.jpg */,
+				EE12B4851AC97F330089CE1D /* Lion.jpg */,
+				EE12B4861AC97F330089CE1D /* LionCub1.jpg */,
+				EE12B4871AC97F330089CE1D /* LionCub2.jpeg */,
+				EE12B4881AC97F330089CE1D /* Lioness.jpeg */,
+				EE12B4891AC97F330089CE1D /* MalayanTiger.jpg */,
+				EE12B48A1AC97F330089CE1D /* SiberianTiger.jpg */,
 				EE12B4601AC976100089CE1D /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -164,9 +188,11 @@
 				TargetAttributes = {
 					EE12B45B1AC976100089CE1D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2S3S7PRC6X;
 					};
 					EE12B4701AC976100089CE1D = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 2S3S7PRC6X;
 						TestTargetID = EE12B45B1AC976100089CE1D;
 					};
 				};
@@ -195,9 +221,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE12B48C1AC97F330089CE1D /* IndochineseTiger.jpg in Resources */,
 				EE12B4671AC976100089CE1D /* Main.storyboard in Resources */,
 				EE12B46C1AC976100089CE1D /* LaunchScreen.xib in Resources */,
+				EE12B4901AC97F330089CE1D /* Lioness.jpeg in Resources */,
+				EE12B48E1AC97F330089CE1D /* LionCub1.jpg in Resources */,
+				EE12B4911AC97F330089CE1D /* MalayanTiger.jpg in Resources */,
+				EE12B4921AC97F330089CE1D /* SiberianTiger.jpg in Resources */,
+				EE12B48B1AC97F330089CE1D /* BengalTiger.jpg in Resources */,
 				EE12B4691AC976100089CE1D /* Images.xcassets in Resources */,
+				EE12B48D1AC97F330089CE1D /* Lion.jpg in Resources */,
+				EE12B48F1AC97F330089CE1D /* LionCub2.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +396,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -373,6 +409,7 @@
 				INFOPLIST_FILE = LionsAndTigersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LionsAndTigers.app/LionsAndTigers";
 			};
 			name = Debug;
@@ -381,6 +418,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -388,6 +427,7 @@
 				INFOPLIST_FILE = LionsAndTigersTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LionsAndTigers.app/LionsAndTigers";
 			};
 			name = Release;
