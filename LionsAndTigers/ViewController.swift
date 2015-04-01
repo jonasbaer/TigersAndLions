@@ -8,6 +8,9 @@
 
 import UIKit
 
+// Type of Class Tiger needed ! ! ! and declared here to ensure global accessibility
+var myTigers:[Tiger] = []
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var myImageView: UIImageView!
@@ -19,12 +22,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        //JB : Variable which is of type Tiger
+        //JB : Variable which is of type Tiger - only locally available within the function
         var myTiger = Tiger() // Key to get access of instances of other class :)
         myTiger.name = "Tigger"
         myTiger.breed = "Bengal"
         myTiger.age = 3
         myTiger.image = UIImage(named:"BengalTiger.jpg")
+
+        myTigers.append(myTiger)
 
         println("My tiger's name is \(myTiger.name), its age is \(myTiger.age), its breed is \(myTiger.breed) and its image is \(myTiger.image)")
 
@@ -50,6 +55,8 @@ class ViewController: UIViewController {
         fourthTiger.breed = "Siberian Tiger"
         fourthTiger.age = 5
         fourthTiger.image = UIImage(named:"SiberianTiger.jpg")
+
+        myTigers += [secondTiger, thirdTiger, fourthTiger]
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,11 +65,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButtonBarItemPressed(sender: UIBarButtonItem) {
-        
 
+        let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        let tiger = myTigers[randomIndex]
+
+        myImageView.image = tiger.image
+        nameLabel.text = tiger.name
+        breedLabel.text = tiger.breed
+        ageLabel.text = ("\(tiger.age)")
     }
-
-
-
 }
 
