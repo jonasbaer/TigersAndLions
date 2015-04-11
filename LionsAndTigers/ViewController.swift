@@ -11,6 +11,9 @@ import UIKit
 // Type of Class Tiger needed ! ! ! and declared here to ensure global accessibility
 var myTigers:[Tiger] = []
 
+// Created to make sure next() doesn't show up
+var currentIndex = 0
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var myImageView: UIImageView!
@@ -66,15 +69,31 @@ class ViewController: UIViewController {
 
     @IBAction func nextButtonBarItemPressed(sender: UIBarButtonItem) {
 
-        let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        //JB : Ensure that the same tiger is not shown after tab on next...
+        var randomIndex:Int
+        do {
+            randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+        } while currentIndex == randomIndex
+        currentIndex = randomIndex
         let tiger = myTigers[randomIndex]
 
-        myImageView.image = tiger.image
-        nameLabel.text = tiger.name
-        breedLabel.text = tiger.breed
-        ageLabel.text = ("\(tiger.age)")
 
-        UIView.transitionWithView(<#view: UIView#>, duration: <#NSTimeInterval#>, options: <#UIViewAnimationOptions#>, animations: <#() -> Void##() -> Void#>, completion: <#((Bool) -> Void)?##(Bool) -> Void#>)
+//        myImageView.image = tiger.image
+//        nameLabel.text = tiger.name
+//        breedLabel.text = tiger.breed
+//        ageLabel.text = ("\(tiger.age)")
+
+        //JB : Build a nice fade animation after the tab on the next button
+        UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
+
+                self.myImageView.image = tiger.image
+                self.nameLabel.text = tiger.name
+                self.ageLabel.text = "\(tiger.age)"
+                self.breedLabel.text = tiger.breed
+
+            }, completion: {
+                (finished: Bool) -> () in
+            })
     }
 }
 
