@@ -73,6 +73,8 @@ class ViewController: UIViewController {
         nameLabel.text = tiger.name
         breedLabel.text = tiger.breed
         ageLabel.text = ("\(tiger.age)")
+
+        UIView.transitionWithView(<#view: UIView#>, duration: <#NSTimeInterval#>, options: <#UIViewAnimationOptions#>, animations: <#() -> Void##() -> Void#>, completion: <#((Bool) -> Void)?##(Bool) -> Void#>)
     }
 }
 
