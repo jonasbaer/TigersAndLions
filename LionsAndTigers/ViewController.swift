@@ -121,7 +121,7 @@ class ViewController: UIViewController {
         //JB : Fill in our global array
         self.lions += [lion, lioness]
 
-        
+
         var lionCub = LionCub()
         lionCub.age = 1
         lionCub.name = "Simba"
@@ -153,12 +153,15 @@ class ViewController: UIViewController {
         updateView()
     }
 
-    //JB : Update our Truple based on currentAnimal and change to other one - incl. random function
+    //JB : Update our Truple based on currentAnimal and change (!) to other one - incl. random function
     func updateAnimal() {
         switch self.currentAnimal {
         case ("Tiger", _):
             let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
             currentAnimal = ("Lion", randomIndex)
+        case ("Lion", _):
+            let randomIndex = Int(arc4random_uniform(UInt32(lionCubs.count)))
+            currentAnimal = ("LionCub", randomIndex)
         default:
             let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
             currentAnimal = ("Tiger", randomIndex)
@@ -186,6 +189,14 @@ class ViewController: UIViewController {
                 self.ageLabel.text = "\(lion.age)"
                 self.nameLabel.text = lion.name
                 self.randomFactLabel.text = lion.randomFact()
+            }
+            else if self.currentAnimal.species == "LionCub" {
+                let lionCub = self.lionCubs[self.currentAnimal.index]
+                self.myImageView.image = lionCub.image
+                self.breedLabel.text = lionCub.subspecies
+                self.ageLabel.text = "\(lionCub.age)"
+                self.nameLabel.text = lionCub.name
+                self.randomFactLabel.text = lionCub.randomFact()
             }
 
             self.randomFactLabel.hidden = false
