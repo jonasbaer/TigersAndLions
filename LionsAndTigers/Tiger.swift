@@ -9,8 +9,7 @@
 import Foundation
 import UIKit
 
-//JB : Here we setup our Struct's
-
+//JB : Here we setup our Struct with instances and functions
 struct Tiger {
 
     //JB : Adding some Properties to our Struct

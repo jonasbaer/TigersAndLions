@@ -22,6 +22,7 @@
 		EE12B4901AC97F330089CE1D /* Lioness.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4881AC97F330089CE1D /* Lioness.jpeg */; };
 		EE12B4911AC97F330089CE1D /* MalayanTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B4891AC97F330089CE1D /* MalayanTiger.jpg */; };
 		EE12B4921AC97F330089CE1D /* SiberianTiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = EE12B48A1AC97F330089CE1D /* SiberianTiger.jpg */; };
+		EE2E0B701ADF8F5000EE512F /* Lion.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2E0B6F1ADF8F5000EE512F /* Lion.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		EE12B4881AC97F330089CE1D /* Lioness.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Lioness.jpeg; sourceTree = "<group>"; };
 		EE12B4891AC97F330089CE1D /* MalayanTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = MalayanTiger.jpg; sourceTree = "<group>"; };
 		EE12B48A1AC97F330089CE1D /* SiberianTiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SiberianTiger.jpg; sourceTree = "<group>"; };
+		EE2E0B6F1ADF8F5000EE512F /* Lion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lion.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				EE12B4611AC976100089CE1D /* AppDelegate.swift */,
 				EE12B4631AC976100089CE1D /* ViewController.swift */,
 				EE12B4811AC979CC0089CE1D /* Tiger.swift */,
+				EE2E0B6F1ADF8F5000EE512F /* Lion.swift */,
 				EE12B4651AC976100089CE1D /* Main.storyboard */,
 				EE12B4681AC976100089CE1D /* Images.xcassets */,
 				EE12B46A1AC976100089CE1D /* LaunchScreen.xib */,
@@ -252,6 +255,7 @@
 				EE12B4641AC976100089CE1D /* ViewController.swift in Sources */,
 				EE12B4821AC979CC0089CE1D /* Tiger.swift in Sources */,
 				EE12B4621AC976100089CE1D /* AppDelegate.swift in Sources */,
+				EE2E0B701ADF8F5000EE512F /* Lion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,6 +455,7 @@
 				EE12B47D1AC976100089CE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EE12B47E1AC976100089CE1D /* Build configuration list for PBXNativeTarget "LionsAndTigersTests" */ = {
 			isa = XCConfigurationList;
@@ -459,6 +464,7 @@
 				EE12B4801AC976100089CE1D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

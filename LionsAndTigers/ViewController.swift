@@ -13,6 +13,12 @@ class ViewController: UIViewController {
     // Type of Class Tiger needed ! ! ! and declared here to ensure global accessibility
     var myTigers:[Tiger] = []
 
+    //JB: Used to store lion instance content from class Lion.swift
+    var lions:[Lion] = []
+
+    //JB : Create a Tuple with 2 elements
+    var currentAnimal = (species: "Tiger", index: 0)
+
     // Created to make sure next() doesn't show up
     var currentIndex = 0
 
@@ -89,6 +95,30 @@ class ViewController: UIViewController {
         for test in self.myTigers {
             println(test.name)
         }
+
+        //JB : Create instances of our class allowing accessing from here
+        var lion = Lion()
+        lion.age = 4
+        lion.isAlphaMale = false
+        lion.image = UIImage(named: "Lion.jpg")
+        lion.name = "Mufasa"
+        lion.subspecies = "West Africa"
+
+        var lioness = Lion()
+        lioness.age = 3
+        lioness.isAlphaMale = false
+        lioness.image = UIImage(named: "Lioness.jpeg")
+        lioness.name = "Sarabi"
+        lioness.subspecies = "Barbary"
+
+        lion.roar()
+        lioness.roar()
+
+        lion.changeToAlphaMale()
+        println(lion.isAlphaMale)
+
+        //JB : Fill in our global array
+        self.lions += [lion, lioness]
     }
 
     override func didReceiveMemoryWarning() {
@@ -97,35 +127,51 @@ class ViewController: UIViewController {
     }
 
     @IBAction func nextButtonBarItemPressed(sender: UIBarButtonItem) {
+        updateAnimal()
+        updateView()
+    }
 
-        //JB : Ensure that the same tiger is not shown after tab on next...
-        var randomIndex:Int
-        do {
-            //JB : Creates a random number between 0 and the array length
-            randomIndex = Int(arc4random_uniform(UInt32(self.myTigers.count)))
-        } while self.currentIndex == randomIndex
+    //JB : Update our Truple based on currentAnimal and change to other one - incl. random function
+    func updateAnimal() {
+        switch self.currentAnimal {
+        case ("Tiger", _):
+            let randomIndex = Int(arc4random_uniform(UInt32(lions.count)))
+            currentAnimal = ("Lion", randomIndex)
+        default:
+            let randomIndex = Int(arc4random_uniform(UInt32(myTigers.count)))
+            currentAnimal = ("Tiger", randomIndex)
+        }
+    }
 
-        self.currentIndex = randomIndex
-        let tiger = self.myTigers[randomIndex]
-
-//        myImageView.image = tiger.image
-//        nameLabel.text = tiger.name
-//        breedLabel.text = tiger.breed
-//        ageLabel.text = ("\(tiger.age)")
+    //JB : 
+    func updateView() {
 
         //JB : Build a nice fade animation after the tab on the next button
         UIView.transitionWithView(self.view, duration: 2, options: UIViewAnimationOptions.TransitionCrossDissolve, animations: {
 
-                //JB : tiger is declared above - let tiger = self.myTigers[randomIndex]
+            if self.currentAnimal.species == "Tiger" {
+                let tiger = self.myTigers[self.currentAnimal.index]
                 self.myImageView.image = tiger.image
-                self.nameLabel.text = tiger.name
-                self.ageLabel.text = "\(tiger.age)"
                 self.breedLabel.text = tiger.breed
+                self.ageLabel.text = "\(tiger.age)"
+                self.nameLabel.text = tiger.name
                 self.randomFactLabel.text = tiger.randomFact()
+            }
+            else if self.currentAnimal.species == "Lion" {
+                let lion = self.lions[self.currentAnimal.index]
+                self.myImageView.image = lion.image
+                self.breedLabel.text = lion.subspecies
+                self.ageLabel.text = "\(lion.age)"
+                self.nameLabel.text = lion.name
+                self.randomFactLabel.text = lion.randomFact()
+            }
+
+            self.randomFactLabel.hidden = false
 
             }, completion: {
                 (finished: Bool) -> () in
-            })
+        })
+
     }
 }
 
