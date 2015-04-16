@@ -10,11 +10,14 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // Type of Class Tiger needed ! ! ! and declared here to ensure global accessibility
+    //JB : Type of Class Tiger needed ! ! ! and declared here to ensure global accessibility
     var myTigers:[Tiger] = []
 
-    //JB: Used to store lion instance content from class Lion.swift
+    //JB : Used to store lion instance content from class Lion.swift
     var lions:[Lion] = []
+
+    //JB : Dito for subclass instances
+    var lionCubs:[LionCub] = []
 
     //JB : Create a Tuple with 2 elements
     var currentAnimal = (species: "Tiger", index: 0)
@@ -48,8 +51,6 @@ class ViewController: UIViewController {
         //JB : Call of function which is declared in Tiger.swift file
         myTiger.chuff()
         myTiger.chuffANumberOfTimes(5, isLoud: false)
-
-//        println("My tiger's name is \(myTiger.name), its age is \(myTiger.age), its breed is \(myTiger.breed) and its image is \(myTiger.image)")
 
         //JB : Declaration for the first launch of the App
         self.myImageView.image = myTiger.image
@@ -119,6 +120,27 @@ class ViewController: UIViewController {
 
         //JB : Fill in our global array
         self.lions += [lion, lioness]
+
+        
+        var lionCub = LionCub()
+        lionCub.age = 1
+        lionCub.name = "Simba"
+        lionCub.image = UIImage(named: "LionCub1.jpg")
+        lionCub.subspecies = "Masai"
+        lionCub.isAlphaMale = true
+
+        lionCub.roar()
+        lionCub.rubLionCubsBelly()
+
+        var femaleLionCub = LionCub()
+        femaleLionCub.age = 1
+        femaleLionCub.name = "Nala"
+        femaleLionCub.image = UIImage(named: "LionCub2.jpeg")
+        femaleLionCub.subspecies = "Transvaal"
+        femaleLionCub.isAlphaMale = false
+
+        self.lionCubs += [lionCub, femaleLionCub]
+
     }
 
     override func didReceiveMemoryWarning() {
